@@ -1,0 +1,369 @@
+:root {
+  --primary: #ec9006;
+  --bg: #f9f9f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  min-height: 2000px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  border-bottom: 1px solid #513c28;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: #fff;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  display: inline-block;
+  color: #010101;
+  font-size: 1.2rem;
+  margin: 0 0.3rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar .navbar-extra a {
+  color: #010101;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #010101;
+  border-radius: 5px;
+  padding: 0.4rem;
+  gap: 0.5rem;
+  transition: border 0.2s;
+}
+
+.navbar .search-container:hover {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.navbar .search-container input[type="text"] {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar .search-container i {
+  color: var(--primary);
+  cursor: pointer;
+}
+
+#hamburger-menu {
+  display: none;
+  position: fixed;
+  top: 1.6rem;
+  right: 2rem;
+  font-size: 2.5rem;
+  color: #010101;
+  cursor: pointer;
+  z-index: 1000;
+  transition: color 0.3s ease;
+}
+
+#hamburger-menu:hover {
+  color: var(--primary);
+}
+/* Container for the whole header section */
+.header-container {
+  margin-top: 16vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5.5rem;
+  background-color: #f2f2f2; /* Light grey background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Welcome message styling */
+.welcome-message p {
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: #000000; /* Black text */
+  margin: 0;
+}
+
+/* Contact box styling */
+.contact-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.specialist-text {
+  background-color: #e0e0e0; /* Light grey background */
+  padding: 0.8rem 1.5rem;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  color: #808080; /* Grey text */
+  font-weight: 500;
+  text-align: center;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact button styling */
+.contact-button {
+  background-color: #b6895b;
+  color: #ffffff; /* White text */
+  padding: 0.8rem 1.5rem;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect for contact button */
+.contact-button:hover {
+  background-color: #e55a00; /* Darker orange on hover */
+  transform: scale(1.05); /* Slightly enlarges on hover */
+}
+
+/* WhatsApp icon styling */
+.contact-button i {
+  font-size: 1.2rem;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(1, 1, 3, 0.1) 25%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 3em;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content h1 span {
+  display: block;
+  color: var(--primary);
+}
+/* Styling for the service list */
+.hero .content .service-list {
+  background-color: var(--bg);
+  color: #010101;
+  padding: 1rem 1.5rem;
+  border-radius: 1.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+  margin: 1rem auto;
+}
+
+/* Styling for the description text */
+.hero .content .description {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 1.2rem;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* General styling for the about section */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  gap: 50px;
+}
+
+/* Styling for the image */
+.about-image img {
+  height: 75vh;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the content */
+.about-content {
+  max-width: 500px;
+}
+
+.about h2 {
+  padding-left: 50px;
+  padding-top: 50px;
+  color: #ff6700;
+  font-size: 24px;
+}
+
+.about-content p {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.about-button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #ff6700;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Media Query */
+@media (max-width: 1366) {
+  html {
+    font-size: 75%;
+  }
+  .header-container {
+    margin-top: 70px;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  #hamburger-menu {
+    display: inline-block;
+  }
+  .header-container {
+    margin-top: 60px; /* Adjusted margin for tablets */
+  }
+
+  .navbar .navbar-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: #f0f0f0;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    transition: right 0.3s ease;
+    z-index: 998;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #010101;
+    display: block;
+    margin: 1.5rem;
+    font-size: 2rem;
+  }
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content {
+    max-width: 100%;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+}
+
+/* phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55.5%;
+  }
+
+  .header-container {
+    margin-top: 50px; /* Adjusted margin for mobile phones */
+  }
+
+  .navbar .search-container {
+    width: 150px;
+    padding: 0.3rem;
+  }
+}
