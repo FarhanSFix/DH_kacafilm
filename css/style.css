@@ -15,7 +15,7 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
-  min-height: 2000px;
+  min-height: 3000px;
 }
 
 .navbar {
@@ -240,13 +240,14 @@ body {
 }
 
 /* General styling for the about section */
+.about {
+  padding-bottom: 2.5rem;
+}
 .about-container {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 50px;
+  padding: 20px, 50px, 50px, 50px;
   gap: 50px;
 }
 
@@ -264,8 +265,9 @@ body {
 }
 
 .about h2 {
-  padding-left: 50px;
+  padding-left: 90px;
   padding-top: 50px;
+  padding-bottom: 10px;
   color: #ff6700;
   font-size: 24px;
 }
@@ -286,6 +288,65 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
+.features-section {
+  justify-content: center;
+  display: flex;
+  gap: 3rem;
+  background-color: var(--primary);
+  padding: 2rem;
+}
+
+.feature {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1rem;
+  color: #fff;
+}
+.icon-circle i {
+  font-size: 2rem; /* Adjust icon size */
+}
+
+.feature h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.feature p {
+  color: #010101;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.service h2 {
+  padding-left: 90px;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  color: #ff6700;
+  font-size: 24px;
+}
+.service h2:hover {
+  color: var(--primary);
+}
+.service h2 i:hover {
+  color: var(--primary);
+  transform: rotate(90deg);
+}
 
 /* Media Query */
 @media (max-width: 1366) {
@@ -294,6 +355,12 @@ body {
   }
   .header-container {
     margin-top: 70px;
+  }
+  .about h2 {
+    padding: 25px;
+  }
+  .about-container {
+    margin: 1.5rem;
   }
 }
 
@@ -337,10 +404,14 @@ body {
   .navbar .navbar-nav a::after {
     transform-origin: 0 0;
   }
+  .about h2 {
+    padding: 20px;
+  }
 
   .about-container {
     flex-direction: column;
     text-align: center;
+    margin: 1.8rem;
   }
 
   .about-content {
@@ -348,7 +419,16 @@ body {
   }
 
   .about-image img {
+    height: 50vh;
     max-width: 100%;
+  }
+  .features-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service h2 {
+    padding: 20px;
   }
 }
 
