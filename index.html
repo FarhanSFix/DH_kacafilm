@@ -66,7 +66,7 @@
         </div>
         <div class="description">
           <p>
-            Tim profesional Cahaya Interior menjamin pemasangan yang rapi dan
+            Tim profesional DH Kacafilm menjamin pemasangan yang rapi dan
             presisi untuk setiap layanan yang mereka tawarkan
           </p>
         </div>
@@ -183,36 +183,136 @@
     <!-- galery start -->
     <section class="galery" id="galery">
       <h2>Galery</h2>
-      <div class="slideshow-container">
-        <div class="slide fade">
-          <img src="./img/slide (1).jpg" alt="Slide 1" />
-        </div>
-        <div class="slide fade">
-          <img src="./img/slide (2).jpg" alt="Slide 2" />
-        </div>
-        <div class="slide fade">
-          <img src="./img/slide (3).jpg" alt="Slide 3" />
-        </div>
-        <div class="slide fade">
-          <img src="./img/slide (4).jpg" alt="Slide 4" />
-        </div>
-        <div class="slide fade">
-          <img src="./img/slide (5).jpg" alt="Slide 5" />
-        </div>
-        <div class="slide fade">
-          <img src="./img/slide (6).jpg" alt="Slide 6" />
-        </div>
-        <!-- Add more slides as needed -->
+      <div class="galery-div">
+        <div class="galery-content">
+          <div class="slideshow-container">
+            <div class="slide fade">
+              <img src="./img/slide (1).jpg" alt="Slide 1" />
+            </div>
+            <div class="slide fade">
+              <img src="./img/slide (2).jpg" alt="Slide 2" />
+            </div>
+            <div class="slide fade">
+              <img src="./img/slide (3).jpg" alt="Slide 3" />
+            </div>
+            <div class="slide fade">
+              <img src="./img/slide (4).jpg" alt="Slide 4" />
+            </div>
+            <div class="slide fade">
+              <img src="./img/slide (5).jpg" alt="Slide 5" />
+            </div>
+            <div class="slide fade">
+              <img src="./img/slide (6).jpg" alt="Slide 6" />
+            </div>
+            <!-- Add more slides as needed -->
 
-        <!-- Arrow navigation -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <!-- Arrow navigation -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+        </div>
       </div>
     </section>
     <!-- galery end -->
+    <section class="contact" id="contact">
+      <h2>Contact</h2>
+      <div class="contact-container">
+        <!-- Map -->
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.273845464832!2d106.7410308735544!3d-6.227580860986673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f0b7020e93ad%3A0x7bee291bb8df127!2sJl.%20H.%20Musa%20No.116%2C%20RT.9%2FRW.1%2C%20Petukangan%20Utara%2C%20Kec.%20Pesanggrahan%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012260!5e0!3m2!1sid!2sid!4v1731064219356!5m2!1sid!2sid"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <h3>Tinggalkan Pesan Anda!</h3>
+          <p>Pesan yang Anda kirimkan akan masuk ke E-mail</p>
+          <form action="#" method="post">
+            <input type="text" name="name" placeholder="Nama Anda" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Anda"
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Nomor Ponsel"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Tulis Pesan Anda"
+              required
+            ></textarea>
+            <button type="submit" class="submit-button">Kirim Pesan</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <div class="floating-buttons">
+      <a
+        href="https://wa.me/6281399259566"
+        target="_blank"
+        class="fab fab-wa"
+        title="WhatsApp"
+      >
+        <i class="fa fa-whatsapp"></i>
+      </a>
+      <a href="tel:+6285280607656" class="fab fab-phone" title="Phone">
+        <i class="fa fa-phone"></i>
+      </a>
+      <button class="fab fab-top" title="Back to Top" onclick="scrollToTop()">
+        <i class="fa fa-chevron-up"></i>
+      </button>
+    </div>
+
     <script>
       feather.replace();
     </script>
     <script src="js/script.js"></script>
   </body>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section logo-section">
+        <img src="logo.png" alt="Company Logo" class="logo" />
+        <h2>DH KACAFILM</h2>
+        <p>KACA FILM, CUTTING, DIGITAL PRINTING, SANDBLAST, WALLPAPER</p>
+        <div class="social-icons">
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-envelope"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-section contact-section">
+        <h3>Hubungi Kami</h3>
+        <div class="contact-info">
+          <p><i class="fa fa-phone"></i> Telephone: 0851-4208-2963</p>
+          <p><i class="fa fa-whatsapp"></i> Whatsapp: 0851-4208-2963</p>
+          <p>
+            <i class="fa fa-envelope"></i> Email: dhstikerkacafilm@gmail.com
+          </p>
+        </div>
+      </div>
+      <div class="footer-section address-section">
+        <h3>Alamat</h3>
+        <div class="address-info">
+          <p>
+            <i class="fa fa-map-marker"></i> Alamat: JI. H. Musa No. 116,
+            RT.9/RW.1, Petukangar Utara, Kec. Pesanggrahan, Kota Jakarta
+            Selatan, Daerah Khusus Ibukota Jakarta 12260, Indonesia
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>©2024 DH Kacafilm. All Rights Reserved.</p>
+    </div>
+  </footer>
 </html>

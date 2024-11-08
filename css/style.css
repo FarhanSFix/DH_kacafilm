@@ -334,7 +334,8 @@ body {
 }
 
 .service,
-.galery h2 {
+.galery,
+.contact h2 {
   padding-left: 90px;
   padding-right: 90px;
   padding-top: 50px;
@@ -396,7 +397,20 @@ body {
 .contact-button:hover {
   background-color: #e55500;
 }
+.galery-div {
+  background-color: var(--primary);
+  padding: 2rem 0; /* Remove horizontal padding */
+  display: flex;
+  justify-content: center;
+}
 
+.galery-div .galery-content {
+  max-width: 1200px; /* Set a max width for the inner content */
+  width: 100%;
+  padding: 0 2rem; /* Add horizontal padding here */
+  display: flex;
+  gap: 3rem;
+}
 .slideshow-container {
   position: relative;
   margin: 50px 90px 30px 90px;
@@ -447,6 +461,181 @@ body {
 /* Fade effect */
 .fade {
   animation: slideAnimation 1s ease-in-out forwards;
+}
+
+.contact-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 50px 90px 30px 90px;
+}
+
+.map,
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.contact-form h3 {
+  color: #ff6600;
+}
+
+.contact-form p {
+  color: #666;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-form .submit-button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 400px; /* Minimum height if form is short */
+  border-radius: 5px;
+}
+
+.contact-form,
+.map {
+  height: auto;
+}
+
+.contact-container {
+  align-items: stretch;
+}
+
+/* Floating Action Buttons Styling */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.fab {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.fab-wa {
+  background-color: #25d366;
+}
+
+.fab-phone {
+  background-color: #34b7f1;
+}
+
+.fab-top {
+  background-color: #ff6600;
+}
+
+.fab:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #ff6600;
+  color: white;
+  padding: 20px 50px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.logo-section .logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.logo-section h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.contact-section h3,
+.address-section h3 {
+  border-bottom: 2px solid gray;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.contact-info p,
+.address-info p {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.contact-info p i,
+.address-info p i {
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  color: white;
+  text-decoration: underline;
 }
 
 /* Responsive adjustments */
@@ -550,6 +739,21 @@ body {
 
   .service h2 {
     padding: 20px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    margin: 30px 20px; /* Reduce margin for smaller screens */
+  }
+
+  .contact-form,
+  .map {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .map iframe {
+    height: 300px; /* Adjust iframe height for smaller screens */
   }
 }
 
