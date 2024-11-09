@@ -168,13 +168,13 @@ body {
 }
 
 /* Hover effect for contact button */
-.contact-button:hover {
+.contact-button1:hover {
   background-color: #e55a00; /* Darker orange on hover */
   transform: scale(1.05); /* Slightly enlarges on hover */
 }
 
 /* WhatsApp icon styling */
-.contact-button i {
+.contact-button1 i {
   font-size: 1.2rem;
 }
 
@@ -331,6 +331,38 @@ body {
   font-size: 0.9rem;
   line-height: 1.4;
   text-align: center;
+}
+.features-section .icon-circle {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+}
+
+.features-section .icon-circle::before {
+  content: "";
+  position: absolute;
+  /* top: -5px;
+  left: -5px; */
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  border: 7px solid orange;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  animation: rotateBorder 2s ease-in-out infinite;
+}
+
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .service,
@@ -584,11 +616,15 @@ body {
   flex: 1;
   min-width: 250px;
 }
+.logo-section {
+  display: inline-block;
+}
 
 .logo-section .logo {
-  width: 80px;
+  width: 50px;
   height: auto;
   margin-bottom: 10px;
+  background-color: #f2f2f2;
 }
 
 .logo-section h2 {
